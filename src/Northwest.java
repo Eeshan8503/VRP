@@ -3,15 +3,14 @@ package src;
 public class Northwest {
     long n;
     CostPerUnitCell[][] matrix;
-    double []supply, demand;
+    long []supply, demand;
 
-    public Northwest(long n, CostPerUnitCell[][] matrix, double[] supply, double[] demand) {
+    public Northwest(long n, CostPerUnitCell[][] matrix, long[] supply, long[] demand) {
         this.n = n;
         this.matrix = matrix;
         this.supply = supply;
         this.demand = demand;
     }
-
 
     public boolean compute(){
         try{
@@ -44,4 +43,5 @@ public class Northwest {
             return false;
         }
     }
+
 }

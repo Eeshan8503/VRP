@@ -3,15 +3,23 @@ package src;
 import java.lang.*;
 
 class CostPerUnitCell{
-    int allocation;
-    int cpu;
+    long allocation;
+    double cpu;
     public CostPerUnitCell(){}
     public CostPerUnitCell(int allocation, int cpu){
         this.allocation = allocation;
         this.cpu = cpu;
     }
+
+    public void setAllocation(long allocation) {
+        this.allocation = allocation;
+    }
+
+
+
 }
 public class App {
+
     public double computeScalar(double petrolPrice, double initial_mileage, double extraLoad){
         double mileage = initial_mileage - ((extraLoad/45.359)*0.033);
         return petrolPrice/mileage;
