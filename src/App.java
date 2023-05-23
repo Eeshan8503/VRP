@@ -3,14 +3,34 @@ package src;
 import java.lang.*;
 
 class CostPerUnitCell{
-    int allocation;
-    int cpu;
-    public CostPerUnitCell(int allocation, int cpu){
+    long allocation;
+    double cpu;
+    public CostPerUnitCell(){}
+    public CostPerUnitCell(long allocation, double cpu){
         this.allocation = allocation;
         this.cpu = cpu;
     }
+
+    public void setAllocation(long alloc) {
+
+        System.out.println("Allocating func called");
+        this.allocation = alloc;
+        System.out.println(this.allocation);
+    }
+
+
+
 }
 public class App {
+    public static double compute(CostPerUnitCell[][] matrix){
+        double result=0;
+        for(CostPerUnitCell i[]:matrix){
+            for(CostPerUnitCell j:i){
+                result+=j.cpu*j.allocation;
+            }
+        }
+        return result;
+    }
     public double computeScalar(double petrolPrice, double initial_mileage, double extraLoad){
         double mileage = initial_mileage - ((extraLoad/45.359)*0.033);
         return petrolPrice/mileage;
@@ -39,27 +59,43 @@ public class App {
         };
 
         double[][] distanceMatrix = {
-                {0,3,4,5,7,8},
-                {3,0,6,4,4,6},
-                {4,6,0,6,7,7},
-                {5,4,6,0,5,9},
-                {5,4,7,5,0,7},
-                {8,6,7,9,7,0}
+                {0, 3, 4, 5, 7, 8},
+                {3, 0, 6, 4, 4, 6},
+                {4, 6, 0, 6, 7, 7},
+                {5, 4, 6, 0, 5, 9},
+                {5, 4, 7, 5, 0, 7},
+                {8, 6, 7, 9, 7, 0}
         };
+        double petrolPrice = 100;
+        double initial_mileage = 17;
+        double extraLoad = 140;
+
+        double scalar = new App().computeScalar(petrolPrice, initial_mileage, extraLoad);
+
         int n = distanceMatrix.length;
+        long[] supply={70,30,50,0,0,0};
+        long[] demand={0,0,0,65,42,43};
         // Compute the cost per unit matrix
-        CostPerUnitCell[][] costPerUnitMatrix = new CostPerUnitCell[n][n];
-        for(int i=0;i<n;i++){
-            for(int j=0;j<n;j++){
+        CostPerUnitCell[][] matrix = new CostPerUnitCell[n][n];
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
                 // Calculate CPU using distance matrix and the scalar
-                costPerUnitMatrix[i][j] = new CostPerUnitCell(0,0);
+                matrix[i][j] = new CostPerUnitCell(0, 1 * distanceMatrix[i][j]);
             }
         }
-        if(n < 7){
+        Debugger debug=new Debugger();
+//        debug.Cpu_printer(matrix);
+        if (n < 7) {
             // Northwest Corner method multiple times and compare resutls ( bruteforce )
-        }
-        else{
+            Northwest obj=new Northwest(n,matrix,supply,demand);
+            obj.compute();
+            System.out.println("===================================================");
+            debug.Cpu_printer(matrix);
+            System.out.println(compute(matrix));
+        } else {
             // Northwest Corner method followed by (n-1)*(n-1) times MODI method [ or if lowest cost found before that ]
         }
+
     }
 }
