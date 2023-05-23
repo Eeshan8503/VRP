@@ -10,7 +10,7 @@ class CostPerUnitCell{
         this.cpu = cpu;
     }
 }
-public class Wrapper {
+public class App {
     public double computeScalar(double petrolPrice, double initial_mileage, double extraLoad){
         double mileage = initial_mileage - ((extraLoad/45.359)*0.033);
         return petrolPrice/mileage;
