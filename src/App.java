@@ -1,12 +1,11 @@
 package src;
 
 import java.lang.*;
-import java.util.Scanner;
 
 class CostPerUnitCell{
-    long allocation;
-    double cpu;
-    public CostPerUnitCell(long allocation, double cpu){
+    int allocation;
+    int cpu;
+    public CostPerUnitCell(int allocation, int cpu){
         this.allocation = allocation;
         this.cpu = cpu;
     }
@@ -17,7 +16,6 @@ public class App {
         return petrolPrice/mileage;
     }
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
         // Visualization code goes here -> receive the distance matrix from the frontend
 
 //        long[][] distanceMatrix = {
@@ -48,19 +46,13 @@ public class App {
                 {5,4,7,5,0,7},
                 {8,6,7,9,7,0}
         };
-        double petrolPrice = 100;
-        double initial_mileage = 17;
-        double extraLoad = 140;
-
-        double scalar = new App().computeScalar(petrolPrice, initial_mileage, extraLoad);
-
         int n = distanceMatrix.length;
         // Compute the cost per unit matrix
-        CostPerUnitCell[][] matrix = new CostPerUnitCell[n][n];
+        CostPerUnitCell[][] costPerUnitMatrix = new CostPerUnitCell[n][n];
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
                 // Calculate CPU using distance matrix and the scalar
-                matrix[i][j] = new CostPerUnitCell(0,scalar*distanceMatrix[i][j]);
+                costPerUnitMatrix[i][j] = new CostPerUnitCell(0,0);
             }
         }
         if(n < 7){
