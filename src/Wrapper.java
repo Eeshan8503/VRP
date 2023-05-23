@@ -1,17 +1,17 @@
-import java.io.*;
-import java.util.*;
+package src;
+
 import java.lang.*;
 
-class CostPerUnitMatrix{
+class CostPerUnitCell{
     int allocation;
     int cpu;
-    public CostPerUnitMatrix(int allocation, int cpu){
+    public CostPerUnitCell(int allocation, int cpu){
         this.allocation = allocation;
         this.cpu = cpu;
     }
 }
 public class Wrapper {
-    public double computeScalar(double petrolPrice, double initial_mileage, double extraLoad, double[][] distanceMatrix){
+    public double computeScalar(double petrolPrice, double initial_mileage, double extraLoad){
         double mileage = initial_mileage - ((extraLoad/45.359)*0.033);
         return petrolPrice/mileage;
     }
@@ -48,11 +48,11 @@ public class Wrapper {
         };
         int n = distanceMatrix.length;
         // Compute the cost per unit matrix
-        CostPerUnitMatrix[][] costPerUnitMatrix = new CostPerUnitMatrix[n][n];
-for(int i=0;i<n;i++){
+        CostPerUnitCell[][] costPerUnitMatrix = new CostPerUnitCell[n][n];
+        for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
                 // Calculate CPU using distance matrix and the scalar
-                costPerUnitMatrix[i][j] = new CostPerUnitMatrix(0,0);
+                costPerUnitMatrix[i][j] = new CostPerUnitCell(0,0);
             }
         }
         if(n < 7){
