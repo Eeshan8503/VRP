@@ -3,10 +3,10 @@ package src;
 import java.lang.*;
 
 class CostPerUnitCell{
-    int allocation;
-    int cpu;
+    long allocation;
+    double cpu;
     public CostPerUnitCell(){}
-    public CostPerUnitCell(int allocation, int cpu){
+    public CostPerUnitCell(long allocation, double cpu){
         this.allocation = allocation;
         this.cpu = cpu;
     }
