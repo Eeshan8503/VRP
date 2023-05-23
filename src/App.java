@@ -5,6 +5,7 @@ import java.lang.*;
 class CostPerUnitCell{
     int allocation;
     int cpu;
+    public CostPerUnitCell(){}
     public CostPerUnitCell(int allocation, int cpu){
         this.allocation = allocation;
         this.cpu = cpu;
@@ -48,11 +49,12 @@ public class App {
         };
         int n = distanceMatrix.length;
         // Compute the cost per unit matrix
-        CostPerUnitCell[][] costPerUnitMatrix = new CostPerUnitCell[n][n];
+        CostPerUnitCell[][] matrix = new CostPerUnitCell[n][n];
+
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
                 // Calculate CPU using distance matrix and the scalar
-                costPerUnitMatrix[i][j] = new CostPerUnitCell(0,0);
+                matrix[i][j] = new CostPerUnitCell(0,0);
             }
         }
         if(n < 7){
