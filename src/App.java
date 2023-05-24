@@ -3,15 +3,24 @@ package src;
 import java.lang.*;
 
 class CostPerUnitCell{
-    int allocation;
-    int cpu;
+    double allocation;
+    double cpu;
     public CostPerUnitCell(){}
-    public CostPerUnitCell(int allocation, int cpu){
+    public CostPerUnitCell(double allocation, double cpu){
         this.allocation = allocation;
         this.cpu = cpu;
     }
 }
 public class App {
+    public static double compute(CostPerUnitCell[][] matrix){
+        double result=0;
+        for(CostPerUnitCell[] i :matrix){
+            for(CostPerUnitCell j:i){
+                result+=j.cpu*j.allocation;
+            }
+        }
+        return result;
+    }
     public double computeScalar(double petrolPrice, double initial_mileage, double extraLoad){
         double mileage = initial_mileage - ((extraLoad/45.359)*0.033);
         return petrolPrice/mileage;
@@ -47,6 +56,8 @@ public class App {
                 {5,4,7,5,0,7},
                 {8,6,7,9,7,0}
         };
+        double[] supply = {70,30,50,0,0,0};
+        double[] demand = {0,0,0,65,42,43};
         int n = distanceMatrix.length;
         // Compute the cost per unit matrix
         CostPerUnitCell[][] matrix = new CostPerUnitCell[n][n];
@@ -54,11 +65,15 @@ public class App {
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
                 // Calculate CPU using distance matrix and the scalar
-                matrix[i][j] = new CostPerUnitCell(0,0);
+                matrix[i][j] = new CostPerUnitCell(0,1 * distanceMatrix[i][j]);
             }
         }
+        CostPerUnitMatrix costPerUnitMatrix = new CostPerUnitMatrix(n, matrix, supply, demand);
         if(n < 7){
             // Northwest Corner method multiple times and compare resutls ( bruteforce )
+            Northwest nw = new Northwest(n, costPerUnitMatrix.matrix, supply, demand);
+            nw.compute();
+            System.out.println("Cost: "+compute(costPerUnitMatrix.matrix));
         }
         else{
             // Northwest Corner method followed by (n-1)*(n-1) times MODI method [ or if lowest cost found before that ]
