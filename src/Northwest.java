@@ -25,8 +25,8 @@ public class Northwest {
 //            reiterate until cpu boundaries go out of range
 
             int i=0,j=0;
-            System.out.println(Arrays.toString(supply));
-            System.out.println(Arrays.toString(demand));
+//            System.out.println(Arrays.toString(supply));
+//            System.out.println(Arrays.toString(demand));
             while(i < n && j < n){
                 if(demand[j] == 0){
                     ++j;
@@ -39,7 +39,7 @@ public class Northwest {
                 if(supply[i] > demand[j]){
                     double balance = supply[i] - demand[j];
                     cpu.matrix[i][j].allocation = demand[j];
-                    System.out.println("demand: " + cpu.matrix[i][j].allocation);
+//                    System.out.println("demand: " + cpu.matrix[i][j].allocation);
                     if(j >= i){
                         supply[j]+= balance;
                         supply[i] = 0;
@@ -49,35 +49,35 @@ public class Northwest {
                     }
                     demand[j] = 0;
                     ++j;
-                    System.out.println(Arrays.toString(supply));
-                    System.out.println(Arrays.toString(demand));
-                    debug.Cpu_printer(matrix);
-                    System.out.println("=====================================");
+//                    System.out.println(Arrays.toString(supply));
+//                    System.out.println(Arrays.toString(demand));
+//                    debug.Cpu_printer(matrix);
+//                    System.out.println("=====================================");
                 }
                 else if(demand[j] > supply[i]){
                     cpu.matrix[i][j].allocation = supply[i];
                     demand[j]-= supply[i];
                     supply[i] = 0;
                     ++i;
-                    System.out.println(Arrays.toString(supply));
-                    System.out.println(Arrays.toString(demand));
-                    debug.Cpu_printer(matrix);
-                    System.out.println("=====================================");
+//                    System.out.println(Arrays.toString(supply));
+//                    System.out.println(Arrays.toString(demand));
+//                    debug.Cpu_printer(matrix);
+//                    System.out.println("=====================================");
                 }
                 else{
                     cpu.matrix[i][j].allocation = supply[i];
                     supply[i] = 0;
                     demand[j] = 0;
                     ++j;
-                    System.out.println(Arrays.toString(supply));
-                    System.out.println(Arrays.toString(demand));
-                    debug.Cpu_printer(matrix);
-                    System.out.println("=====================================");
+//                    System.out.println(Arrays.toString(supply));
+//                    System.out.println(Arrays.toString(demand));
+//                    debug.Cpu_printer(matrix);
+//                    System.out.println("=====================================");
                 }
             }
-            System.out.println(Arrays.toString(supply));
-            System.out.println(Arrays.toString(demand));
-            debug.Cpu_printer(matrix);
+//            System.out.println(Arrays.toString(supply));
+//            System.out.println(Arrays.toString(demand));
+//            debug.Cpu_printer(matrix);
             return true;
         }
         catch (Exception e){

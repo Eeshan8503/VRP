@@ -66,6 +66,13 @@ public class App {
             Northwest nw = new Northwest(n, costPerUnitMatrix.matrix, supply, demand);
             nw.compute();
             System.out.println("Cost: "+compute(costPerUnitMatrix.matrix));
+            System.out.println("======================================================================");
+            Debugger debug = new Debugger();
+            System.out.println("Original Matrix:");
+            debug.printMatrix(matrix);
+
+            System.out.println("\nPerforming rotations in all directions:");
+            debug.performRotations(matrix);
         }
         else{
             // Northwest Corner method followed by (n-1)*(n-1) times MODI method [ or if lowest cost found before that ]
