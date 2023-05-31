@@ -45,16 +45,29 @@ public class App {
                 {662, 1210, 754, 1358, 1244, 708, 480, 856, 514, 468, 354, 844, 730, 536, 194, 798, 0},
         };
 
+//        double[][] distanceMatrix = {
+//                {0,3,4,5,7,8},
+//                {3,0,6,4,4,6},
+//                {4,6,0,6,7,7},
+//                {5,4,6,0,5,9},
+//                {5,4,7,5,0,7},
+//                {8,6,7,9,7,0}
+//        };
+//        double[] supply = {70,30,50,0,0,0};
+//        double[] demand = {0,0,0,65,42,43};
+
         double[][] distanceMatrix = {
-                {0,3,4,5,7,8},
-                {3,0,6,4,4,6},
-                {4,6,0,6,7,7},
-                {5,4,6,0,5,9},
-                {5,4,7,5,0,7},
-                {8,6,7,9,7,0}
+                {6,4,7,6,0,7},
+                {6,8,7,9,7,0},
+                {4,5,5,0,6,9},
+                {0,3,4,4,6,6},
+                {4,5,0,5,7,7},
+                {3,0,7,5,4,8}
         };
-        double[] supply = {70,30,50,0,0,0};
-        double[] demand = {0,0,0,65,42,43};
+        double[] supply = {50,0,0,30,0,70};
+        double[] demand = {0,0,42,65,0,43};
+        double[] supply1 = {70,30,50,0,0,0};
+        double[] demand1 = {0,0,0,65,42,43};
         int n = distanceMatrix.length;
         // Compute the cost per unit matrix
         CostPerUnitCell[][] matrix = new CostPerUnitCell[n][n];
@@ -66,7 +79,7 @@ public class App {
             }
         }
         CostPerUnitMatrix costPerUnitMatrix = new CostPerUnitMatrix(n, matrix, supply, demand);
-        if(n < 7){
+        if(n > 7){
             // Northwest Corner method multiple times and compare resutls ( bruteforce )
             Northwest nw = new Northwest(n, costPerUnitMatrix.matrix, supply, demand);
             nw.compute();
@@ -75,13 +88,24 @@ public class App {
             System.out.println("======================================================================");
             NorthwestPnC nwPnC = new NorthwestPnC();
             System.out.println("Original Matrix:");
-            nwPnC.printMatrix(matrix);
+            nwPnC.printMatrix(matrix, supply1, demand1);
 
             System.out.println("\nPerforming rotations in all directions:");
-            nwPnC.performRotations(matrix);
+            nwPnC.performRotations(matrix, supply, demand);
         }
         else{
             // Northwest Corner method followed by (n-1)*(n-1) times MODI method [ or if lowest cost found before that ]
+            Northwest nw = new Northwest(n, costPerUnitMatrix.matrix, supply, demand);
+            nw.compute();
+            FinalCost finalCost = new FinalCost(compute(costPerUnitMatrix.matrix));
+            System.out.println("Cost after NW: "+finalCost.getFinalCost());
+            System.out.println("======================================================================");
+
+            // MODI method
+            Modi modi = new Modi(n, costPerUnitMatrix.matrix, supply, demand);
+            modi.compute();
+            finalCost = new FinalCost(compute(modi.getMatrix()));
+            System.out.println("Cost after MODI: "+finalCost.getFinalCost());
         }
     }
 }
