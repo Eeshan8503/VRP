@@ -4,6 +4,11 @@ import java.lang.*;
 
 
 public class App {
+    double finalCost;
+
+    public void setCost(double cost){
+        this.finalCost = cost;
+    }
     public static double compute(CostPerUnitCell[][] matrix){
         double result=0;
         for(CostPerUnitCell[] i :matrix){
@@ -65,7 +70,15 @@ public class App {
             // Northwest Corner method multiple times and compare resutls ( bruteforce )
             Northwest nw = new Northwest(n, costPerUnitMatrix.matrix, supply, demand);
             nw.compute();
-            System.out.println("Cost: "+compute(costPerUnitMatrix.matrix));
+            FinalCost finalCost = new FinalCost(compute(costPerUnitMatrix.matrix));
+            System.out.println("Cost: "+finalCost.getFinalCost());
+            System.out.println("======================================================================");
+            NorthwestPnC nwPnC = new NorthwestPnC();
+            System.out.println("Original Matrix:");
+            nwPnC.printMatrix(matrix);
+
+            System.out.println("\nPerforming rotations in all directions:");
+            nwPnC.performRotations(matrix);
         }
         else{
             // Northwest Corner method followed by (n-1)*(n-1) times MODI method [ or if lowest cost found before that ]
