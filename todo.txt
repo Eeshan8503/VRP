@@ -1,0 +1,20 @@
+Priority tasks
+    --> Scraping script
+    --> Obtainment of Distance matrix
+    --> 
+
+Sequence of events:
+    Scraping button: Triggers the Scrapingscript
+            Data extracted
+
+        Useful data extracted using regex
+
+        imported to the model_creator_file(jupyter file)
+
+        Call the java API with the distance matrix which returns the optimal route of the truck
+
+        process the returned JSON data from the java API into the trucks route
+
+        visualize the route
+
+Runner starts from the scraping script
