@@ -14,6 +14,16 @@ public class Modi {
         this.supply = supply;
         this.demand = demand;
     }
+
+    public static double computeCost(CostPerUnitCell[][] matrix){
+        double result=0;
+        for(CostPerUnitCell[] i :matrix){
+            for(CostPerUnitCell j:i){
+                result+=j.cpu*j.allocation;
+            }
+        }
+        return result;
+    }
     public CostPerUnitCell[][] getMatrix() {
         return matrix;
     }
@@ -27,11 +37,10 @@ public class Modi {
 //    }
 public boolean compute() {
     try {
-        System.out.println("INSIDE COMPUTE FUNCTION");
         // Initialize the u and v arrays
         double[] u = new double[n];
         double[] v = new double[n];
-        u[0] = 0; // Set the first value of u to 0
+        u[0] = 0; // Set the first element of u to 0
 
         // Compute the u and v arrays
         for (int i = 0; i < n; i++) {
@@ -72,13 +81,14 @@ public boolean compute() {
             }
         }
 
-        // If there are no cells with positive opportunity costs, we're done
-        if (maxOpportunityCost <= 0) {
-            System.out.println("maxOpportunityCost <= 0");
+        // If there are no more cells with positive opportunity costs, we are done
+        if (maxI == -1 && maxJ == -1) {
+            FinalCost finalCost = new FinalCost(computeCost(matrix));
+            System.out.println("Cost after MODI: "+finalCost.getFinalCost());
             return true;
         }
 
-        // Compute the cycle
+        // Find the cycle starting from the cell with the largest opportunity cost
         List<int[]> cycle = new ArrayList<>();
         cycle.add(new int[]{maxI, maxJ});
         boolean[] visitedRows = new boolean[n];
@@ -87,67 +97,49 @@ public boolean compute() {
         visitedCols[maxJ] = true;
         boolean foundCycle = false;
         while (!foundCycle) {
-            // Find the row in the cycle that matches the current column
-            int row = -1;
-            for (int i = 0; i < cycle.size(); i++) {
-                if (cycle.get(i)[1] == maxJ) {
-                    row = cycle.get(i)[0];
+            int[] lastCell = cycle.get(cycle.size() - 1);
+            int row = lastCell[0];
+            int col = lastCell[1];
+            for (int j = 0; j < n; j++) {
+                if (j != col && matrix[row][j].allocation > 0 && !visitedCols[j]) {
+                    cycle.add(new int[]{row, j});
+                    visitedCols[j] = true;
                     break;
                 }
             }
-
-            // Add the next cell to the cycle
-            if (row != -1) {
-                for (int j = 0; j < n; j++) {
-                    if (matrix[row][j].allocation > 0 && !visitedCols[j]) {
-                        cycle.add(new int[]{row, j});
-                        visitedCols[j] = true;
-                        break;
-                    }
-                }
-            } else {
-                // Find the column in the cycle that matches the current row
-                int col = -1;
-                for (int i = 0; i < cycle.size(); i++) {
-                    if (cycle.get(i)[0] == maxI) {
-                        col = cycle.get(i)[1];
-                        break;
-                    }
-                }
-
-                // Add the next cell to the cycle
-                for (int i = 0; i < n; i++) {
-                    if (matrix[i][col].allocation > 0 && !visitedRows[i]) {
-                        cycle.add(new int[]{i, col});
-                        visitedRows[i] = true;
-                        break;
-                    }
+            lastCell = cycle.get(cycle.size() - 1);
+            row = lastCell[0];
+            col = lastCell[1];
+            for (int i = 0; i < n; i++) {
+                if (i != row && matrix[i][col].allocation > 0 && !visitedRows[i]) {
+                    cycle.add(new int[]{i, col});
+                    visitedRows[i] = true;
+                    break;
                 }
             }
-
-            // Check if we've closed the cycle
             if (cycle.get(0)[0] == cycle.get(cycle.size() - 1)[0] && cycle.get(0)[1] == cycle.get(cycle.size() - 2)[1]) {
-                System.out.println("Cycle: " + cycle);
                 foundCycle = true;
             }
         }
 
-        // Compute the minimum allocation in the cycle
+        // Find the minimum allocation in the cycle
         double minAllocation = Double.MAX_VALUE;
         for (int i = 0; i < cycle.size(); i++) {
-            if (matrix[cycle.get(i)[0]][cycle.get(i)[1]].allocation < minAllocation) {
-                minAllocation = matrix[cycle.get(i)[0]][cycle.get(i)[1]].allocation;
+            int[] cell = cycle.get(i);
+            if (i % 2 == 0) {
+                minAllocation = Math.min(minAllocation, matrix[cell[0]][cell[1]].allocation);
+            } else {
+                minAllocation = Math.min(minAllocation, matrix[cell[0]][cell[1]].allocation - minAllocation);
             }
         }
 
         // Update the allocations in the cycle
         for (int i = 0; i < cycle.size(); i++) {
-            int row = cycle.get(i)[0];
-            int col = cycle.get(i)[1];
+            int[] cell = cycle.get(i);
             if (i % 2 == 0) {
-                matrix[row][col].allocation += minAllocation;
+                matrix[cell[0]][cell[1]].allocation -= minAllocation;
             } else {
-                matrix[row][col].allocation -= minAllocation;
+                matrix[cell[0]][cell[1]].allocation += minAllocation;
             }
         }
 
@@ -157,5 +149,4 @@ public boolean compute() {
         return false;
     }
 }
-
 }
