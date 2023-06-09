@@ -1,6 +1,7 @@
 package src;
 
 import java.lang.*;
+import java.util.Arrays;
 
 
 public class App {
@@ -66,6 +67,7 @@ public class App {
         };
         double[] supply = {50,0,0,30,0,70};
         double[] demand = {0,0,42,65,0,43};
+        demand = Arrays.copyOf(demand, 6);
         double[] supply1 = {70,30,50,0,0,0};
         double[] demand1 = {0,0,0,65,42,43};
         int n = distanceMatrix.length;
@@ -102,10 +104,14 @@ public class App {
             System.out.println("======================================================================");
 
             // MODI method
-            Modi modi = new Modi(n, costPerUnitMatrix.matrix, supply, demand);
-            modi.compute();
-            finalCost = new FinalCost(compute(modi.getMatrix()));
-            System.out.println("Cost after MODI: "+finalCost.getFinalCost());
+//            Modi modi = new Modi(n, costPerUnitMatrix.matrix, supply, demand);
+//            modi.compute();
+//            finalCost = new FinalCost(compute(modi.getMatrix()));
+//            System.out.println("Cost after MODI: "+finalCost.getFinalCost());
+
+            // VAM
+            VAM vam = new VAM(costPerUnitMatrix.matrix, supply, demand, n);
+//            vam.solve();
         }
     }
 }
