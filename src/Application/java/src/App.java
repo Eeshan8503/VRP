@@ -23,7 +23,7 @@ public class App {
         double mileage = initial_mileage - ((extraLoad/45.359)*0.033);
         return petrolPrice/mileage;
     }
-    public static void main(String[] args){
+    public static double runner(){
         // Visualization code goes here -> receive the distance matrix from the frontend
 
         long[][] distanceMatrix = {
@@ -110,8 +110,10 @@ public class App {
 //            System.out.println("Cost after MODI: "+finalCost.getFinalCost());
 
             // VAM
-            VAM vam = new VAM(costPerUnitMatrix.matrix, supply, demand, n);
+//            VAM vam = new VAM(costPerUnitMatrix.matrix, supply, demand, n);
 //            vam.solve();
+            return finalCost.getFinalCost();
         }
+        return 2.5;
     }
 }
