@@ -13,10 +13,10 @@ export { default as BaseLayerPickerViewModel } from './Source/BaseLayerPicker/Ba
 export { default as ProviderViewModel } from './Source/BaseLayerPicker/ProviderViewModel.js';
 export { default as createDefaultImageryProviderViewModels } from './Source/BaseLayerPicker/createDefaultImageryProviderViewModels.js';
 export { default as createDefaultTerrainProviderViewModels } from './Source/BaseLayerPicker/createDefaultTerrainProviderViewModels.js';
-export { default as CesiumInspector } from './Source/CesiumInspector/CesiumInspector.js';
-export { default as CesiumInspectorViewModel } from './Source/CesiumInspector/CesiumInspectorViewModel.js';
 export { default as Cesium3DTilesInspector } from './Source/Cesium3DTilesInspector/Cesium3DTilesInspector.js';
 export { default as Cesium3DTilesInspectorViewModel } from './Source/Cesium3DTilesInspector/Cesium3DTilesInspectorViewModel.js';
+export { default as CesiumInspector } from './Source/CesiumInspector/CesiumInspector.js';
+export { default as CesiumInspectorViewModel } from './Source/CesiumInspector/CesiumInspectorViewModel.js';
 export { default as FullscreenButton } from './Source/FullscreenButton/FullscreenButton.js';
 export { default as FullscreenButtonViewModel } from './Source/FullscreenButton/FullscreenButtonViewModel.js';
 export { default as HomeButton } from './Source/HomeButton/HomeButton.js';
@@ -38,9 +38,6 @@ export { default as SelectionIndicatorViewModel } from './Source/SelectionIndica
 export { default as knockout_3_5_1 } from './Source/ThirdParty/knockout-3.5.1.js';
 export { default as knockout_es5 } from './Source/ThirdParty/knockout-es5.js';
 export { default as knockout } from './Source/ThirdParty/knockout.js';
-export { default as Timeline } from './Source/Timeline/Timeline.js';
-export { default as TimelineHighlightRange } from './Source/Timeline/TimelineHighlightRange.js';
-export { default as TimelineTrack } from './Source/Timeline/TimelineTrack.js';
 export { default as VRButton } from './Source/VRButton/VRButton.js';
 export { default as VRButtonViewModel } from './Source/VRButton/VRButtonViewModel.js';
 export { default as Viewer } from './Source/Viewer/Viewer.js';
@@ -51,3 +48,6 @@ export { default as viewerPerformanceWatchdogMixin } from './Source/Viewer/viewe
 export { default as viewerVoxelInspectorMixin } from './Source/Viewer/viewerVoxelInspectorMixin.js';
 export { default as VoxelInspector } from './Source/VoxelInspector/VoxelInspector.js';
 export { default as VoxelInspectorViewModel } from './Source/VoxelInspector/VoxelInspectorViewModel.js';
+export { default as Timeline } from './Source/Timeline/Timeline.js';
+export { default as TimelineHighlightRange } from './Source/Timeline/TimelineHighlightRange.js';
+export { default as TimelineTrack } from './Source/Timeline/TimelineTrack.js';
