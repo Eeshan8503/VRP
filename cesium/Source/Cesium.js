@@ -800,6 +800,10 @@ export { parseFeatureMetadataLegacy } from '@cesium/engine';
 export { parseStructuralMetadata } from '@cesium/engine';
 export { preprocess3DTileContent } from '@cesium/engine';
 export { processVoxelProperties } from '@cesium/engine';
+<<<<<<< HEAD
+=======
+export { _shadersCzmBuiltins } from '@cesium/engine';
+>>>>>>> eeshan
 export { _shadersAllMaterialAppearanceFS } from '@cesium/engine';
 export { _shadersAllMaterialAppearanceVS } from '@cesium/engine';
 export { _shadersBasicMaterialAppearanceFS } from '@cesium/engine';
@@ -814,7 +818,10 @@ export { _shadersPolylineColorAppearanceVS } from '@cesium/engine';
 export { _shadersPolylineMaterialAppearanceVS } from '@cesium/engine';
 export { _shadersTexturedMaterialAppearanceFS } from '@cesium/engine';
 export { _shadersTexturedMaterialAppearanceVS } from '@cesium/engine';
+<<<<<<< HEAD
 export { _shadersCzmBuiltins } from '@cesium/engine';
+=======
+>>>>>>> eeshan
 export { _shadersAspectRampMaterial } from '@cesium/engine';
 export { _shadersBumpMapMaterial } from '@cesium/engine';
 export { _shadersCheckerboardMaterial } from '@cesium/engine';
@@ -1134,13 +1141,21 @@ export { createCommand } from '@cesium/widgets';
 export { subscribeAndEvaluate } from '@cesium/widgets';
 export { Animation } from '@cesium/widgets';
 export { AnimationViewModel } from '@cesium/widgets';
+<<<<<<< HEAD
 export { Cesium3DTilesInspector } from '@cesium/widgets';
 export { Cesium3DTilesInspectorViewModel } from '@cesium/widgets';
+=======
+>>>>>>> eeshan
 export { BaseLayerPicker } from '@cesium/widgets';
 export { BaseLayerPickerViewModel } from '@cesium/widgets';
 export { ProviderViewModel } from '@cesium/widgets';
 export { createDefaultImageryProviderViewModels } from '@cesium/widgets';
 export { createDefaultTerrainProviderViewModels } from '@cesium/widgets';
+<<<<<<< HEAD
+=======
+export { Cesium3DTilesInspector } from '@cesium/widgets';
+export { Cesium3DTilesInspectorViewModel } from '@cesium/widgets';
+>>>>>>> eeshan
 export { CesiumInspector } from '@cesium/widgets';
 export { CesiumInspectorViewModel } from '@cesium/widgets';
 export { FullscreenButton } from '@cesium/widgets';
