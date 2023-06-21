@@ -1,7 +1,6 @@
 Priority tasks
     --> Scraping script
-    --> Obtainment of Distance matrix
-    --> 
+    --> Obtainment of Distance matrix ( DONE -- jupyter notebook files not opening )
 
 Sequence of events:
     Scraping button: Triggers the Scrapingscript
