@@ -12,8 +12,114 @@ Sequence of events:
 
         Call the java API with the distance matrix which returns the optimal route of the truck
 
-        process the returned JSON data from the java API into the trucks route
+        process the returned JSON data from the java API into the trucks route ( DONE )
 
         visualize the route
 
 Runner starts from the scraping script
+
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+JSON - JAVA - JSON - PYTHON
+
+import com.google.gson.Gson;
+
+public class MyClass {
+  public static void main(String[] args) {
+    MyClass obj = new MyClass();
+    obj.name = "John";
+    obj.age = 30;
+    obj.car = null;
+
+    String json = new Gson().toJson(obj);
+    System.out.println(json);
+  }
+}
+
+class MyClass {
+  String name;
+  int age;
+  String car;
+}
+
+
+
+import com.google.gson.Gson;
+
+public class MyClass {
+  public static void main(String[] args) {
+    String json = "{\"name\":\"John\", \"age\":30, \"car\":null}";
+    MyClass obj = new Gson().fromJson(json, MyClass.class);
+    System.out.println(obj);
+  }
+}
+
+class MyClass {
+  String name;
+  int age;
+  String car;
+
+  @Override
+  public String toString() {
+    return "MyClass [name=" + name + ", age=" + age + ", car=" + car + "]";
+  }
+}
+
+import json
+
+json_string = '{"name": "John", "age": 30, "city": "New York"}'
+python_dict = json.loads(json_string)
+
+print(python_dict)
+
+
+import json
+
+python_dict = {'name': 'John', 'age': 30, 'city': 'New York'}
+json_string = json.dumps(python_dict)
+
+print(json_string)
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+USING SELENIUM TO ADD AN EXTERNAL BUTTON IN A WEBSITE AND DEFINING IT"S FUNCTIONALITY:
+
+from selenium import webdriver
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
+
+# Define the function to be called when the new button is clicked
+def new_button_function():
+    # Define the functionality of the new button here
+
+    # For example, you could print a message to the console
+    print("New button was clicked!")
+
+# Instantiate the Selenium webdriver and navigate to the webpage
+driver = webdriver.Chrome()
+driver.get("https://www.example.com")
+
+# Find an existing element on the page where you want to add the new button
+existing_element = driver.find_element_by_id("existing-element-id")
+
+# Create a new button element using JavaScript and execute it using Selenium
+new_button_script = """
+var newButton = document.createElement('button');
+newButton.innerHTML = 'New Button';
+newButton.onclick = function() {
+    // Call the function defined earlier when the new button is clicked
+    %s
+};
+arguments[0].appendChild(newButton);
+""" % new_button_function.__name__
+driver.execute_script(new_button_script, existing_element)
+
+# Wait for the new button to be added to the page
+driver.implicitly_wait(10)
+
+# Find the new button element and click it
+new_button = driver.find_element_by_xpath("//button[text()='New Button']")
+action = ActionChains(driver)
+action.move_to_element(new_button).click().perform()
