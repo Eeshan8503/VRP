@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b472c359-b6e6-4aa6-9830-27304972135c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/cesium/veroviz/jupyter_notebooks/.ipynb_checkpoints/cesium_demo-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/cesium/veroviz/jupyter_notebooks/.ipynb_checkpoints/cesium_demo-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cesium/veroviz/jupyter_notebooks/cesium_demo.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/cesium/veroviz/jupyter_notebooks/cesium_demo.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/todo.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
