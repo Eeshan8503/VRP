@@ -123,3 +123,22 @@ driver.implicitly_wait(10)
 new_button = driver.find_element_by_xpath("//button[text()='New Button']")
 action = ActionChains(driver)
 action.move_to_element(new_button).click().perform()
+
+
+---------------------------
+Done tasks
+
+sketch file renderson electron "done" button added and the nodes array extracted
+
+  nodes array to jupyter-notebook
+            |
+            |
+            V
+  distance array to java API
+            |
+            |
+            V
+  routes returned to jupyter-notebook
+
+
+visualizer opens on electron app with routes
