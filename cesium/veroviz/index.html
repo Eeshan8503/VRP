@@ -187,6 +187,7 @@
 
 
 	<script>
+		loadProblem()
 		Cesium.Ion.defaultAccessToken = "";
 
 		try {
@@ -230,6 +231,7 @@
 			fileName = $(this).val(); 
 			fileName = fileName.replace("C:\\fakepath\\", "");
 			fileName = fileName.replace(/;/g, "/");
+			console.log(fileName)
 			$('#fileSelected').html(fileName); 
 		})	
 

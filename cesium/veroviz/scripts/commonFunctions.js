@@ -1,7 +1,8 @@
-
+// 'use strict'
+// import { visualizer } from "../../../DesktopApp/visualizer";
+// let visualizer=require('../../../DesktopApp/visualizer')
 var localVersion = '2020.10.23';
 var latestVersion = undefined;
-
 var isActiveOpen   = false;
 var isActiveConfig = false;
 var isActiveUtil   = false;
@@ -418,10 +419,11 @@ function runRoutes(czmlRouteFile, allIDs, orientationIDs)  {
 
 
 function loadProblem()  {
-	reqFilename = document.getElementById("targetFile").value;		
+	reqFilename = "/veroviz/demo.vrv";		
 	reqFilename = reqFilename.replace("C:\\fakepath\\", "");
 	reqFilename = reqFilename.replace(".vrv", "");
 	problemName = reqFilename.replace(/;/g, "/");
+	console.log(problemName)
 	if (reqFilename != "")  {
 		setScripts(problemName);
 
@@ -433,6 +435,8 @@ function loadProblem()  {
 	{
 		console.log("There was no file selected to load.");
 	}
+	// visualizer()
+
 };
 
 
