@@ -4,9 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b472c359-b6e6-4aa6-9830-27304972135c" name="Changes" comment="">
+    <list default="true" id="754d605e-4f94-442d-a4b1-9afe67b5372e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/todo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cesium/Source/Cesium.js" beforeDir="false" afterPath="$PROJECT_DIR$/cesium/Source/Cesium.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cesium/packages/engine/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cesium/packages/engine/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cesium/veroviz/demo/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/cesium/veroviz/demo/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cesium/veroviz/demo/displayNodes.js" beforeDir="false" afterPath="$PROJECT_DIR$/cesium/veroviz/demo/displayNodes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cesium/veroviz/demo/displayPaths.js" beforeDir="false" afterPath="$PROJECT_DIR$/cesium/veroviz/demo/displayPaths.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cesium/veroviz/demo/routes.czml" beforeDir="false" afterPath="$PROJECT_DIR$/cesium/veroviz/demo/routes.czml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskServer/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/flaskServer/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskServer/cesium_demo_python.py" beforeDir="false" afterPath="$PROJECT_DIR$/flaskServer/cesium_demo_python.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/java/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/java/src/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/java/src/Northwest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/java/src/Northwest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/MyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/MyController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,30 +44,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "arnish"
+    "full.screen.before.presentation.mode": "false",
+    "git-widget-placeholder": "eeshan",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.Application" />
-      <module name="VRP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Application" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
