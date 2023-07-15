@@ -3,38 +3,26 @@
 
 function setConfigs() {
     viewer.camera.flyTo({
-        destination: Cesium.Rectangle.fromDegrees(-78.826851, 42.986935, -78.738749, 43.041084) 
+        destination: Cesium.Rectangle.fromDegrees(-78.808997, 42.994246, -78.685068, 43.092456) 
     });
-    viewer.clock.currentTime = Cesium.JulianDate.addSeconds('2020-10-23T08:00:00Z', 0, new Cesium.JulianDate());
+    viewer.clock.currentTime = Cesium.JulianDate.addSeconds('2023-07-16T08:00:00Z', 0, new Cesium.JulianDate());
     allIDs = [
-        'o-Truck-/veroviz/models/ub_truck.gltf-stationary', 
+        'o-Truck0-/veroviz/models/ub_truck.gltf-stationary', 
         'o-truck package 1-/veroviz/models/box_blue.gltf-stationary', 
         'o-truck package 2-/veroviz/models/box_blue.gltf-stationary', 
-        'o-UAV-/veroviz/models/drone_package.gltf-stationary', 
-        'o-uav package 1-/veroviz/models/box_yellow.gltf-stationary', 
-        'o-UAV-/veroviz/models/drone.gltf-stationary', 
-        'o-UAV-/veroviz/models/drone_package.gltf-vertical', 
-        'o-UAV-/veroviz/models/drone.gltf-vertical', 
-        'o-Blue Car-/veroviz/models/car_blue.gltf-move', 
-        'o-Green Car-/veroviz/models/car_green.gltf-move', 
-        'o-Red Car-/veroviz/models/car_red.gltf-move', 
-        'o-Truck-/veroviz/models/ub_truck.gltf-move', 
-        'o-UAV-/veroviz/models/drone_package.gltf-move', 
-        'o-UAV-/veroviz/models/drone.gltf-move'    
+        'o-Truck1-/veroviz/models/ub_truck.gltf-stationary', 
+        'o-Truck0-/veroviz/models/ub_truck.gltf-move', 
+        'o-Truck1-/veroviz/models/ub_truck.gltf-move'    
     ];
     orientationIDs = [
-        'o-Blue Car-/veroviz/models/car_blue.gltf-move', 
-        'o-Green Car-/veroviz/models/car_green.gltf-move', 
-        'o-Red Car-/veroviz/models/car_red.gltf-move', 
-        'o-Truck-/veroviz/models/ub_truck.gltf-move', 
-        'o-UAV-/veroviz/models/drone_package.gltf-move', 
-        'o-UAV-/veroviz/models/drone.gltf-move'    
+        'o-Truck0-/veroviz/models/ub_truck.gltf-move', 
+        'o-Truck1-/veroviz/models/ub_truck.gltf-move'    
     ];
     czmlRouteFile = '/veroviz/demo/routes.czml';
     runRoutes(czmlRouteFile, allIDs, orientationIDs);
-objectInfo['Truck-/veroviz/models/ub_truck.gltf'] = {
-    label : 'Truck (/veroviz/models/ub_truck.gltf)', 
-    childModels : ['o-Truck-/veroviz/models/ub_truck.gltf-stationary', 'o-Truck-/veroviz/models/ub_truck.gltf-move'],
+objectInfo['Truck0-/veroviz/models/ub_truck.gltf'] = {
+    label : 'Truck0 (/veroviz/models/ub_truck.gltf)', 
+    childModels : ['o-Truck0-/veroviz/models/ub_truck.gltf-stationary', 'o-Truck0-/veroviz/models/ub_truck.gltf-move'],
     scale : 100, 
     minPxSize : 75 
 }; 
@@ -50,39 +38,9 @@ objectInfo['truck package 2-/veroviz/models/box_blue.gltf'] = {
     scale : 100, 
     minPxSize : 75 
 }; 
-objectInfo['UAV-/veroviz/models/drone_package.gltf'] = {
-    label : 'UAV (/veroviz/models/drone_package.gltf)', 
-    childModels : ['o-UAV-/veroviz/models/drone_package.gltf-stationary', 'o-UAV-/veroviz/models/drone_package.gltf-vertical', 'o-UAV-/veroviz/models/drone_package.gltf-move'],
-    scale : 100, 
-    minPxSize : 75 
-}; 
-objectInfo['UAV-/veroviz/models/drone.gltf'] = {
-    label : 'UAV (/veroviz/models/drone.gltf)', 
-    childModels : ['o-UAV-/veroviz/models/drone.gltf-stationary', 'o-UAV-/veroviz/models/drone.gltf-vertical', 'o-UAV-/veroviz/models/drone.gltf-move'],
-    scale : 100, 
-    minPxSize : 75 
-}; 
-objectInfo['uav package 1-/veroviz/models/box_yellow.gltf'] = {
-    label : 'uav package 1 (/veroviz/models/box_yellow.gltf)', 
-    childModels : ['o-uav package 1-/veroviz/models/box_yellow.gltf-stationary'],
-    scale : 100, 
-    minPxSize : 75 
-}; 
-objectInfo['Blue Car-/veroviz/models/car_blue.gltf'] = {
-    label : 'Blue Car (/veroviz/models/car_blue.gltf)', 
-    childModels : ['o-Blue Car-/veroviz/models/car_blue.gltf-move'],
-    scale : 100, 
-    minPxSize : 75 
-}; 
-objectInfo['Green Car-/veroviz/models/car_green.gltf'] = {
-    label : 'Green Car (/veroviz/models/car_green.gltf)', 
-    childModels : ['o-Green Car-/veroviz/models/car_green.gltf-move'],
-    scale : 100, 
-    minPxSize : 75 
-}; 
-objectInfo['Red Car-/veroviz/models/car_red.gltf'] = {
-    label : 'Red Car (/veroviz/models/car_red.gltf)', 
-    childModels : ['o-Red Car-/veroviz/models/car_red.gltf-move'],
+objectInfo['Truck1-/veroviz/models/ub_truck.gltf'] = {
+    label : 'Truck1 (/veroviz/models/ub_truck.gltf)', 
+    childModels : ['o-Truck1-/veroviz/models/ub_truck.gltf-stationary', 'o-Truck1-/veroviz/models/ub_truck.gltf-move'],
     scale : 100, 
     minPxSize : 75 
 }; 

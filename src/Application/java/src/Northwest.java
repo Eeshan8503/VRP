@@ -79,10 +79,14 @@ public class Northwest {
 //            System.out.println(Arrays.toString(demand));
 //            debug.Cpu_printer(matrix);
             return true;
+
+
         }
         catch (Exception e){
             System.out.println(e.getMessage());
             return false;
         }
     }
+
+
 }
