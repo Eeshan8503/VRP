@@ -16,8 +16,8 @@ def init_data():
     response = {
         'message': 'Data received successfully',
     }
-    data=codeing.extracter(data);
-    cesium_demo_python.runner(data)
+    # data=codeing.extracter(data);
+    cesium_demo_python.runner(1)
     return jsonify(response)
 
 if __name__ == '__main__':

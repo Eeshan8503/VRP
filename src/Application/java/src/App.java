@@ -5,6 +5,11 @@ import java.util.Arrays;
 
 
 public class App {
+    public static void setDistanceMatrix(double[][] distanceMatrix) {
+        App.distanceMatrix = distanceMatrix;
+    }
+
+    static double[][] distanceMatrix;
     double finalCost;
 
     public void setCost(double cost){
@@ -57,14 +62,7 @@ public class App {
 //        double[] supply = {70,30,50,0,0,0};
 //        double[] demand = {0,0,0,65,42,43};
 
-        double[][] distanceMatrix = {
-                {6,4,7,6,0,7},
-                {6,8,7,9,7,0},
-                {4,5,5,0,6,9},
-                {0,3,4,4,6,6},
-                {4,5,0,5,7,7},
-                {3,0,7,5,4,8}
-        };
+
         double[] supply = {50,0,0,30,0,70};
         double[] demand = {0,0,42,65,0,43};
         demand = Arrays.copyOf(demand, 6);
@@ -114,6 +112,14 @@ public class App {
 //            vam.solve();
             return finalCost.getFinalCost();
         }
+
         return 2.5;
+    }
+    public static int[][] getRoutes(){
+
+
+        int[][] route = {{0,1,3,0}, {1,0,3,1}};
+
+        return route;
     }
 }

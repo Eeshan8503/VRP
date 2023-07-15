@@ -6,8 +6,8 @@ function displayNodes() {
     pin[0] = viewer.entities.add({
         name : '0',
         parent : nodePins,
-        description : 'Depot',
-        position : Cesium.Cartesian3.fromDegrees(-78.787034, 43.001742),
+        description : 'd11',
+        position : Cesium.Cartesian3.fromDegrees(-78.77059936523439, 43.06043086875781),
         billboard : {
             image : pinBuilder.fromText('0', Cesium.Color.RED, 40).toDataURL(),
             verticalOrigin : Cesium.VerticalOrigin.BOTTOM
@@ -17,10 +17,10 @@ function displayNodes() {
     pin[1] = viewer.entities.add({
         name : '1',
         parent : nodePins,
-        description : 'Cust1',
-        position : Cesium.Cartesian3.fromDegrees(-78.816851, 43.015717),
+        description : 'd22',
+        position : Cesium.Cartesian3.fromDegrees(-78.69506835937501, 43.05842514826838),
         billboard : {
-            image : pinBuilder.fromText('1', Cesium.Color.GREEN, 40).toDataURL(),
+            image : pinBuilder.fromText('1', Cesium.Color.RED, 40).toDataURL(),
             verticalOrigin : Cesium.VerticalOrigin.BOTTOM
         }
     });
@@ -28,10 +28,10 @@ function displayNodes() {
     pin[2] = viewer.entities.add({
         name : '2',
         parent : nodePins,
-        description : 'Cust2',
-        position : Cesium.Cartesian3.fromDegrees(-78.791655, 43.031084),
+        description : 'c13',
+        position : Cesium.Cartesian3.fromDegrees(-78.72940063476564, 43.00424589515733),
         billboard : {
-            image : pinBuilder.fromText('2', Cesium.Color.GREEN, 40).toDataURL(),
+            image : pinBuilder.fromText('2', Cesium.Color.BLUE, 40).toDataURL(),
             verticalOrigin : Cesium.VerticalOrigin.BOTTOM
         }
     });
@@ -39,10 +39,10 @@ function displayNodes() {
     pin[3] = viewer.entities.add({
         name : '3',
         parent : nodePins,
-        description : 'Cust3',
-        position : Cesium.Cartesian3.fromDegrees(-78.749357, 43.010989),
+        description : 'c24',
+        position : Cesium.Cartesian3.fromDegrees(-78.78845214843751, 43.02532128785062),
         billboard : {
-            image : pinBuilder.fromText('3', Cesium.Color.GREEN, 40).toDataURL(),
+            image : pinBuilder.fromText('3', Cesium.Color.BLUE, 40).toDataURL(),
             verticalOrigin : Cesium.VerticalOrigin.BOTTOM
         }
     });
