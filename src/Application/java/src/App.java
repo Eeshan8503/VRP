@@ -1,7 +1,9 @@
 package src;
 
 import java.lang.*;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 
 public class App {
@@ -100,6 +102,31 @@ public class App {
             FinalCost finalCost = new FinalCost(compute(costPerUnitMatrix.matrix));
             System.out.println("Cost after NW: "+finalCost.getFinalCost());
             System.out.println("======================================================================");
+            List<List<Integer>> routes = new ArrayList<>();
+            // traverese through the costPerUnitMatrix and for every row create a route arrayList and if allocation of a column is greater than 0 add column number to the list
+            for(int i=0;i<n;i++){
+                List<Integer> temp = new ArrayList<>();
+                for(int j=0;j<n;j++){
+                    if(costPerUnitMatrix.matrix[i][j].allocation > 0){
+                        temp.add(j);
+                    }
+                }
+                routes.add(temp);
+            }
+            int[][] twoDArray = new int[routes.size()][];
+            for (int i = 0; i < routes.size(); i++) {
+                List<Integer> row = routes.get(i);
+                twoDArray[i] = new int[row.size()];
+                for (int j = 0; j < row.size(); j++) {
+                    twoDArray[i][j] = row.get(j);
+                }
+            }
+            getRoutes(twoDArray);
+
+
+
+
+
 
             // MODI method
 //            Modi modi = new Modi(n, costPerUnitMatrix.matrix, supply, demand);
@@ -115,11 +142,7 @@ public class App {
 
         return 2.5;
     }
-    public static int[][] getRoutes(){
-
-
-        int[][] route = {{0,1,3,0}, {1,0,3,1}};
-
-        return route;
+    public static int[][] getRoutes(int[][] routes){
+        return routes;
     }
 }
