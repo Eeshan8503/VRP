@@ -1,7 +1,9 @@
 package src;
 
 import java.lang.*;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 
 public class App {
@@ -103,12 +105,13 @@ public class App {
             List<List<Integer>> routes = new ArrayList<>();
             // traverese through the costPerUnitMatrix and for every row create a route arrayList and if allocation of a column is greater than 0 add column number to the list
             for(int i=0;i<n;i++){
-                routes.add(new ArrayList<>());
+                List<Integer> temp = new ArrayList<>();
                 for(int j=0;j<n;j++){
                     if(costPerUnitMatrix.matrix[i][j].allocation > 0){
-                        routes.get(i).add(j);
+                        temp.add(j);
                     }
                 }
+                routes.add(temp);
             }
             int[][] twoDArray = new int[routes.size()][];
             for (int i = 0; i < routes.size(); i++) {
