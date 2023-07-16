@@ -486,7 +486,7 @@ const serveResult = (result, fileName, res, next) => {
   });
 
   const server = app.listen(
-    argv.port,
+    8081,
     argv.public ? undefined : "localhost",
     function () {
       if (argv.public) {

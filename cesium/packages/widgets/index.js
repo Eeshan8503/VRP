@@ -13,10 +13,10 @@ export { default as BaseLayerPickerViewModel } from './Source/BaseLayerPicker/Ba
 export { default as ProviderViewModel } from './Source/BaseLayerPicker/ProviderViewModel.js';
 export { default as createDefaultImageryProviderViewModels } from './Source/BaseLayerPicker/createDefaultImageryProviderViewModels.js';
 export { default as createDefaultTerrainProviderViewModels } from './Source/BaseLayerPicker/createDefaultTerrainProviderViewModels.js';
-export { default as Cesium3DTilesInspector } from './Source/Cesium3DTilesInspector/Cesium3DTilesInspector.js';
-export { default as Cesium3DTilesInspectorViewModel } from './Source/Cesium3DTilesInspector/Cesium3DTilesInspectorViewModel.js';
 export { default as CesiumInspector } from './Source/CesiumInspector/CesiumInspector.js';
 export { default as CesiumInspectorViewModel } from './Source/CesiumInspector/CesiumInspectorViewModel.js';
+export { default as Cesium3DTilesInspector } from './Source/Cesium3DTilesInspector/Cesium3DTilesInspector.js';
+export { default as Cesium3DTilesInspectorViewModel } from './Source/Cesium3DTilesInspector/Cesium3DTilesInspectorViewModel.js';
 export { default as FullscreenButton } from './Source/FullscreenButton/FullscreenButton.js';
 export { default as FullscreenButtonViewModel } from './Source/FullscreenButton/FullscreenButtonViewModel.js';
 export { default as Geocoder } from './Source/Geocoder/Geocoder.js';

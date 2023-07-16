@@ -12,7 +12,7 @@ data=5
 @app.route('/init-data', methods=['POST'])
 def init_data():
     data = request.get_json()
-    # print('Received data:', data)
+    print('Received data:', data)
     response = {
         'message': 'Data received successfully',
     }

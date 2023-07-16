@@ -120,7 +120,7 @@
     "yargs": "^17.0.1"
   },
   "scripts": {
-    "start": " node server.js && npm run start-electron",
+    "start": " node server.js",
     "start-electron": "electron ./electron-app/main.cjs",
     "start-public": "node server.js --public --production",
     "coverage": "gulp coverage",

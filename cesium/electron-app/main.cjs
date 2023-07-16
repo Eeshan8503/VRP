@@ -13,7 +13,7 @@ function createWindow() {
     }
   });
 
-  mainWindow.loadURL('http://localhost:8080/veroviz');
+  mainWindow.loadURL('http://localhost:8081/veroviz');
 
   mainWindow.on('closed', function () {
     app.quit();
@@ -24,7 +24,7 @@ app.on('ready', async () => {
   spawn('node', ['server.js']); // Replace with the path to your server file
 
   // Wait for the server to become available
-  await waitOn({ resources: ['http://localhost:8080/veroviz'] }); // Replace with your Node server URL
+  await waitOn({ resources: ['http://localhost:8081/veroviz'] }); // Replace with your Node server URL
 
   createWindow();
 });

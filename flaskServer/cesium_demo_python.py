@@ -5,6 +5,10 @@ import pandas as pd
 import numpy as np
 import warnings
 import requests
+import subprocess
+import socket
+import threading
+import time
 import json
 warnings.filterwarnings("ignore")
 vrv.checkVersion()
@@ -34,6 +38,46 @@ class truck:
         self.startTime=startTime
         self.odID=odID
         self.truckPkgID=truckPkgID
+
+def check_server(host, port):
+    try:
+        # Create a TCP socket
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.settimeout(2)  # Set a timeout for the connection
+
+        # Attempt to connect to the server
+        result = sock.connect_ex((host, port))
+
+        if result == 0:
+            print(f"The server at {host}:{port} is up and running")
+            return True;
+        else:
+            print(f"The server at {host}:{port} is not reachable")
+            return False;
+        # Close the socket
+        sock.close()
+
+    except socket.error as e:
+        print(f"Error occurred while checking the server: {e}")
+
+def worker():
+    print("WORKER")
+    command = "cd ../cesium/ && node server.js"
+    result = subprocess.run(command, shell=True, capture_output=True, text=True,)
+
+def setup():
+    thread = threading.Thread(target=worker)
+    print("MAIN")
+    thread.start()
+    while(check_server('localhost', 8081)!=True):
+        print("Waiting for server to start")
+        time.sleep(1)
+
+    print("SERVER ACTIVE")
+        
+    command = "cd ../cesium/ && npm run start-electron"
+    result = subprocess.run(command, shell=True, capture_output=True, text=True)
+
 def runner(data):
     nodesArray = [ 
     {'id': 0, 'lat': 43.06043086875781, 'lon': -78.77059936523439, 'altMeters': 0.0, 'nodeName': 'd11', 'nodeType': 'depot', 'popupText': 'd11', 'leafletIconPrefix': 'glyphicon', 'leafletIconType': 'info-sign', 'leafletColor': 'red', 'leafletIconText': '0', 'cesiumIconType': 'pin', 'cesiumColor': 'red', 'cesiumIconText': '0', 'elevMeters': None},
@@ -274,4 +318,17 @@ def runner(data):
     #     3. Start a 'node.js' server:  `node server.cjs`
     # 2. Visit http://localhost:8080/veroviz in your web browser.
     # 3. Use the top left icon to select `;veroviz;demo.vrv`, which will be located in the `veroviz/demo` subdirectory of Cesium.
+    setup()
+
+    
 # runner(1)
+
+
+# Check the return code to see if the command executed successfully
+
+
+
+
+
+# Usage example
+
