@@ -66,6 +66,14 @@ public class MyController {
     public ResponseEntity<MyResponse> handleRequest(@RequestBody MyRequest request) {
         // Access the properties of the request object
         double[][] arr2d =request.getDistanceArray();
+
+        for(double I[]:arr2d){
+            for(double j:I){
+                System.out.print(j+" ");
+            }
+            System.out.println();
+        }
+        System.out.println("=====================================");
         // Perform additional processing or tap into the data
         for(double i[]:arr2d){
             for(double j:i){

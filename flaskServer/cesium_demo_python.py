@@ -321,7 +321,7 @@ def runner(data):
     setup()
 
     
-# runner(1)
+runner(1)
 
 
 # Check the return code to see if the command executed successfully

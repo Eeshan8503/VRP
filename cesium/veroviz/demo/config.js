@@ -5,7 +5,7 @@ function setConfigs() {
     viewer.camera.flyTo({
         destination: Cesium.Rectangle.fromDegrees(-78.808997, 42.994246, -78.685068, 43.092456) 
     });
-    viewer.clock.currentTime = Cesium.JulianDate.addSeconds('2023-07-16T08:00:00Z', 0, new Cesium.JulianDate());
+    viewer.clock.currentTime = Cesium.JulianDate.addSeconds('2023-07-20T08:00:00Z', 0, new Cesium.JulianDate());
     allIDs = [
         'o-Truck0-/veroviz/models/ub_truck.gltf-stationary', 
         'o-truck package 1-/veroviz/models/box_blue.gltf-stationary', 

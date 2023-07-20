@@ -6,7 +6,7 @@
 { 
     "id": "o-Truck0-/veroviz/models/ub_truck.gltf-stationary", 
     "name": "o-Truck0-/veroviz/models/ub_truck.gltf-stationary", 
-    "availability": "2023-07-16T08:00:00Z/2023-07-16T08:32:21Z", 
+    "availability": "2023-07-20T08:00:00Z/2023-07-20T08:32:21Z", 
     "model": { 
         "show": true, 
         "gltf": "/veroviz/models/ub_truck.gltf", 
@@ -32,15 +32,15 @@
     }, 
     "position": [ 
         { 
-            "interval": "2023-07-16T08:12:13Z/2023-07-16T08:12:43Z", 
+            "interval": "2023-07-20T08:12:13Z/2023-07-20T08:12:43Z", 
             "cartographicDegrees": [-78.69506835937501, 43.05842514826838, 0] 
         }, 
         { 
-            "interval": "2023-07-16T08:22:36Z/2023-07-16T08:23:06Z", 
+            "interval": "2023-07-20T08:22:36Z/2023-07-20T08:23:06Z", 
             "cartographicDegrees": [-78.78845214843751, 43.02532128785062, 0] 
         }, 
         { 
-            "interval": "2023-07-16T08:31:21Z/2023-07-16T08:31:51Z", 
+            "interval": "2023-07-20T08:31:21Z/2023-07-20T08:31:51Z", 
             "cartographicDegrees": [-78.77059936523439, 43.06043086875781, 0] 
         }
     ]
@@ -48,7 +48,7 @@
 { 
     "id": "o-truck package 1-/veroviz/models/box_blue.gltf-stationary", 
     "name": "o-truck package 1-/veroviz/models/box_blue.gltf-stationary", 
-    "availability": "2023-07-16T08:00:00Z/2023-07-16T08:32:21Z", 
+    "availability": "2023-07-20T08:00:00Z/2023-07-20T08:32:21Z", 
     "model": { 
         "show": true, 
         "gltf": "/veroviz/models/box_blue.gltf", 
@@ -74,11 +74,11 @@
     }, 
     "position": [ 
         { 
-            "interval": "2023-07-16T08:12:43Z/2023-07-16T08:32:21Z", 
+            "interval": "2023-07-20T08:12:43Z/2023-07-20T08:32:21Z", 
             "cartographicDegrees": [-78.69506835937501, 43.05842514826838, 0] 
         }, 
         { 
-            "interval": "2023-07-16T08:18:41Z/2023-07-16T08:32:21Z", 
+            "interval": "2023-07-20T08:18:41Z/2023-07-20T08:32:21Z", 
             "cartographicDegrees": [-78.78845214843751, 43.02532128785062, 0] 
         }
     ]
@@ -86,7 +86,7 @@
 { 
     "id": "o-truck package 2-/veroviz/models/box_blue.gltf-stationary", 
     "name": "o-truck package 2-/veroviz/models/box_blue.gltf-stationary", 
-    "availability": "2023-07-16T08:00:00Z/2023-07-16T08:32:21Z", 
+    "availability": "2023-07-20T08:00:00Z/2023-07-20T08:32:21Z", 
     "model": { 
         "show": true, 
         "gltf": "/veroviz/models/box_blue.gltf", 
@@ -112,11 +112,11 @@
     }, 
     "position": [ 
         { 
-            "interval": "2023-07-16T08:23:06Z/2023-07-16T08:32:21Z", 
+            "interval": "2023-07-20T08:23:06Z/2023-07-20T08:32:21Z", 
             "cartographicDegrees": [-78.78845214843751, 43.02532128785062, 0] 
         }, 
         { 
-            "interval": "2023-07-16T08:31:31Z/2023-07-16T08:32:21Z", 
+            "interval": "2023-07-20T08:31:31Z/2023-07-20T08:32:21Z", 
             "cartographicDegrees": [-78.69506835937501, 43.05842514826838, 0] 
         }
     ]
@@ -124,7 +124,7 @@
 { 
     "id": "o-Truck1-/veroviz/models/ub_truck.gltf-stationary", 
     "name": "o-Truck1-/veroviz/models/ub_truck.gltf-stationary", 
-    "availability": "2023-07-16T08:00:00Z/2023-07-16T08:32:21Z", 
+    "availability": "2023-07-20T08:00:00Z/2023-07-20T08:32:21Z", 
     "model": { 
         "show": true, 
         "gltf": "/veroviz/models/ub_truck.gltf", 
@@ -150,15 +150,15 @@
     }, 
     "position": [ 
         { 
-            "interval": "2023-07-16T08:12:13Z/2023-07-16T08:12:43Z", 
+            "interval": "2023-07-20T08:12:13Z/2023-07-20T08:12:43Z", 
             "cartographicDegrees": [-78.77059936523439, 43.06043086875781, 0] 
         }, 
         { 
-            "interval": "2023-07-16T08:18:11Z/2023-07-16T08:18:41Z", 
+            "interval": "2023-07-20T08:18:11Z/2023-07-20T08:18:41Z", 
             "cartographicDegrees": [-78.78845214843751, 43.02532128785062, 0] 
         }, 
         { 
-            "interval": "2023-07-16T08:31:01Z/2023-07-16T08:31:31Z", 
+            "interval": "2023-07-20T08:31:01Z/2023-07-20T08:31:31Z", 
             "cartographicDegrees": [-78.69506835937501, 43.05842514826838, 0] 
         }
     ]
@@ -166,7 +166,7 @@
 { 
     "id": "o-Truck0-/veroviz/models/ub_truck.gltf-move", 
     "name": "o-Truck0-/veroviz/models/ub_truck.gltf-move", 
-    "availability": "2023-07-16T08:00:00Z/2023-07-16T08:32:21Z", 
+    "availability": "2023-07-20T08:00:00Z/2023-07-20T08:32:21Z", 
     "model": { 
         "show": true, 
         "gltf": "/veroviz/models/ub_truck.gltf", 
@@ -192,10 +192,10 @@
     }, 
     "position": [ 
         { 
-            "interval": "2023-07-16T08:00:30Z/2023-07-16T08:12:13Z",
+            "interval": "2023-07-20T08:00:30Z/2023-07-20T08:12:13Z",
             "interpolationAlgorithm":"LAGRANGE", 
             "interpolationDegree": 1, 
-            "epoch": "2023-07-16T08:00:00Z", 
+            "epoch": "2023-07-20T08:00:00Z", 
             "cartographicDegrees": [ 
                 30.00, -78.770569, 43.060432, 0.000000, 
                 60.96, -78.770331, 43.055795, 0.000000, 
@@ -297,10 +297,10 @@
             ] 
         }, 
         { 
-            "interval": "2023-07-16T08:12:43Z/2023-07-16T08:22:36Z",
+            "interval": "2023-07-20T08:12:43Z/2023-07-20T08:22:36Z",
             "interpolationAlgorithm":"LAGRANGE", 
             "interpolationDegree": 1, 
-            "epoch": "2023-07-16T08:00:00Z", 
+            "epoch": "2023-07-20T08:00:00Z", 
             "cartographicDegrees": [ 
                 763.10, -78.695070, 43.058319, 0.000000, 
                 781.20, -78.696927, 43.058331, 0.000000, 
@@ -396,10 +396,10 @@
             ] 
         }, 
         { 
-            "interval": "2023-07-16T08:23:06Z/2023-07-16T08:31:21Z",
+            "interval": "2023-07-20T08:23:06Z/2023-07-20T08:31:21Z",
             "interpolationAlgorithm":"LAGRANGE", 
             "interpolationDegree": 1, 
-            "epoch": "2023-07-16T08:00:00Z", 
+            "epoch": "2023-07-20T08:00:00Z", 
             "cartographicDegrees": [ 
                 1386.90, -78.788076, 43.024613, 0.000000, 
                 1387.01, -78.788109, 43.024604, 0.000000, 
@@ -508,7 +508,7 @@
 { 
     "id": "o-Truck1-/veroviz/models/ub_truck.gltf-move", 
     "name": "o-Truck1-/veroviz/models/ub_truck.gltf-move", 
-    "availability": "2023-07-16T08:00:00Z/2023-07-16T08:32:21Z", 
+    "availability": "2023-07-20T08:00:00Z/2023-07-20T08:32:21Z", 
     "model": { 
         "show": true, 
         "gltf": "/veroviz/models/ub_truck.gltf", 
@@ -534,10 +534,10 @@
     }, 
     "position": [ 
         { 
-            "interval": "2023-07-16T08:00:30Z/2023-07-16T08:12:13Z",
+            "interval": "2023-07-20T08:00:30Z/2023-07-20T08:12:13Z",
             "interpolationAlgorithm":"LAGRANGE", 
             "interpolationDegree": 1, 
-            "epoch": "2023-07-16T08:00:00Z", 
+            "epoch": "2023-07-20T08:00:00Z", 
             "cartographicDegrees": [ 
                 30.00, -78.695070, 43.058319, 0.000000, 
                 48.10, -78.696927, 43.058331, 0.000000, 
@@ -639,10 +639,10 @@
             ] 
         }, 
         { 
-            "interval": "2023-07-16T08:12:43Z/2023-07-16T08:18:11Z",
+            "interval": "2023-07-20T08:12:43Z/2023-07-20T08:18:11Z",
             "interpolationAlgorithm":"LAGRANGE", 
             "interpolationDegree": 1, 
-            "epoch": "2023-07-16T08:00:00Z", 
+            "epoch": "2023-07-20T08:00:00Z", 
             "cartographicDegrees": [ 
                 763.10, -78.770569, 43.060432, 0.000000, 
                 794.06, -78.770331, 43.055795, 0.000000, 
@@ -702,10 +702,10 @@
             ] 
         }, 
         { 
-            "interval": "2023-07-16T08:18:41Z/2023-07-16T08:31:01Z",
+            "interval": "2023-07-20T08:18:41Z/2023-07-20T08:31:01Z",
             "interpolationAlgorithm":"LAGRANGE", 
             "interpolationDegree": 1, 
-            "epoch": "2023-07-16T08:00:00Z", 
+            "epoch": "2023-07-20T08:00:00Z", 
             "cartographicDegrees": [ 
                 1121.40, -78.788076, 43.024613, 0.000000, 
                 1121.51, -78.788109, 43.024604, 0.000000, 
