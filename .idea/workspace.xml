@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="754d605e-4f94-442d-a4b1-9afe67b5372e" name="Changes" comment="" />
+=======
+    <list default="true" id="754d605e-4f94-442d-a4b1-9afe67b5372e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cesium/Source/Assets/approximateTerrainHeights.json" beforeDir="false" afterPath="$PROJECT_DIR$/cesium/Source/Assets/approximateTerrainHeights.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cesium/Source/Cesium.js" beforeDir="false" afterPath="$PROJECT_DIR$/cesium/Source/Cesium.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cesium/packages/engine/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cesium/packages/engine/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cesium/packages/widgets/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cesium/packages/widgets/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cesium/veroviz/demo/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/cesium/veroviz/demo/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cesium/veroviz/demo/routes.czml" beforeDir="false" afterPath="$PROJECT_DIR$/cesium/veroviz/demo/routes.czml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskServer/cesium_demo_python.py" beforeDir="false" afterPath="$PROJECT_DIR$/flaskServer/cesium_demo_python.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/java/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/java/src/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/MyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/MyController.java" afterDir="false" />
+    </list>
+>>>>>>> 6ae5021b (abcd)
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
