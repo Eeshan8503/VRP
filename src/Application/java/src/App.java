@@ -108,6 +108,9 @@ public class App {
                 List<Integer> temp = new ArrayList<>();
                 for(int j=0;j<n;j++){
                     if(costPerUnitMatrix.matrix[i][j].allocation > 0){
+                        if(j == i){
+                            continue;
+                        }
                         temp.add(j);
                     }
                 }
