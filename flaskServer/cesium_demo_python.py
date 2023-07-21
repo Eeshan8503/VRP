@@ -79,12 +79,8 @@ def setup():
     result = subprocess.run(command, shell=True, capture_output=True, text=True)
 
 def runner(data):
-    nodesArray = [ 
-    {'id': 0, 'lat': 43.06043086875781, 'lon': -78.77059936523439, 'altMeters': 0.0, 'nodeName': 'd11', 'nodeType': 'depot', 'popupText': 'd11', 'leafletIconPrefix': 'glyphicon', 'leafletIconType': 'info-sign', 'leafletColor': 'red', 'leafletIconText': '0', 'cesiumIconType': 'pin', 'cesiumColor': 'red', 'cesiumIconText': '0', 'elevMeters': None},
-    {'id': 1, 'lat': 43.05842514826838, 'lon': -78.69506835937501, 'altMeters': 0.0, 'nodeName': 'd22', 'nodeType': 'depot', 'popupText': 'd22', 'leafletIconPrefix': 'glyphicon', 'leafletIconType': 'info-sign', 'leafletColor': 'red', 'leafletIconText': '1', 'cesiumIconType': 'pin', 'cesiumColor': 'red', 'cesiumIconText': '1', 'elevMeters': None},
-    {'id': 2, 'lat': 43.00424589515733, 'lon': -78.72940063476564, 'altMeters': 0.0, 'nodeName': 'c13', 'nodeType': 'customer', 'popupText': 'c13', 'leafletIconPrefix': 'glyphicon', 'leafletIconType': 'info-sign', 'leafletColor': 'blue', 'leafletIconText': '2', 'cesiumIconType': 'pin', 'cesiumColor': 'blue', 'cesiumIconText': '2', 'elevMeters': None},
-    {'id': 3, 'lat': 43.02532128785062, 'lon': -78.78845214843751, 'altMeters': 0.0, 'nodeName': 'c24', 'nodeType': 'customer', 'popupText': 'c24', 'leafletIconPrefix': 'glyphicon', 'leafletIconType': 'info-sign', 'leafletColor': 'blue', 'leafletIconText': '3', 'cesiumIconType': 'pin', 'cesiumColor': 'blue', 'cesiumIconText': '3', 'elevMeters': None},
-]
+    # print(type(nodesArray))
+    nodesArray=data
 
     myNodes = pd.DataFrame(nodesArray)
     print(nodesArray)
@@ -122,15 +118,26 @@ def runner(data):
 
     # truck
     # lower triangle, following road, stopping to deliver blue packages
-    num_of_trucks=2
+   
     truckArray=[];
     payload = {
            "distanceArray": dataMatrix,  
+           "supply":[50,50,50,50],
+           "demand":[50,50,50,50]
         }
 
     response = requests.post('http://localhost:8080/',json=payload)
     print(response.json())
     truck_routes = response.json()['routes']
+    print("((((((((((()))))))))))")
+    print(truck_routes)
+    print("((((((((((()))))))))))")
+    num_of_trucks = 0
+    for i in truck_routes:
+        if len(i)!=0:
+            num_of_trucks+=1
+    print("====================================")        
+    print(num_of_trucks)
     for i in range(0,num_of_trucks):
         truckArray.append(truck(truck_route=truck_routes[i],myObjectID='Truck'+str(i),))
     
@@ -321,7 +328,7 @@ def runner(data):
     setup()
 
     
-runner(1)
+# runner(1)
 
 
 # Check the return code to see if the command executed successfully

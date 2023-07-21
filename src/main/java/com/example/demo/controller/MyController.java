@@ -8,6 +8,25 @@ import org.springframework.web.bind.annotation.RestController;
 import src.App;
 class MyRequest {
     private double distanceArray[][];
+    private double supply[];
+
+    public double[] getSupply() {
+        return supply;
+    }
+
+    public void setSupply(double[] supply) {
+        this.supply = supply;
+    }
+
+    public double[] getDemand() {
+        return demand;
+    }
+
+    public void setDemand(double[] demand) {
+        this.demand = demand;
+    }
+
+    private double demand[];
     public double[][] getDistanceArray() {
         return distanceArray;
     }
@@ -82,6 +101,8 @@ public class MyController {
             System.out.println();
         }
         App.setDistanceMatrix(arr2d);
+        App.setSupply(request.getSupply());
+        App.setDemand(request.getDemand());
         double ans= App.runner();
         int[][] routes=App.getRoutes();
         MyResponse response = new MyResponse();

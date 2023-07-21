@@ -14,6 +14,15 @@ public class App {
 
     static double[][] distanceMatrix;
     double finalCost;
+    static double[] supply ;
+    static double[] demand ;
+    public static void setDemand(double[] demand) {
+        App.demand = demand;
+    }
+
+    public static void setSupply(double[] supply) {
+        App.supply = supply;
+    }
 
     public void setCost(double cost){
         this.finalCost = cost;
@@ -66,8 +75,7 @@ public class App {
 //        double[] demand = {0,0,0,65,42,43};
 
 
-        double[] supply = {50,0,0,30,0,70};
-        double[] demand = {0,0,42,65,0,43};
+
         demand = Arrays.copyOf(demand, 6);
         double[] supply1 = {70,30,50,0,0,0};
         double[] demand1 = {0,0,0,65,42,43};
@@ -107,15 +115,27 @@ public class App {
             // traverese through the costPerUnitMatrix and for every row create a route arrayList and if allocation of a column is greater than 0 add column number to the list
             for(int i=0;i<n;i++){
                 List<Integer> temp = new ArrayList<>();
-
+                temp.add(i);
                 for(int j=0;j<n;j++){
                     if(costPerUnitMatrix.matrix[i][j].allocation > 0){
+                        if(j == i){
+//                            empty the temp list
+//                            temp.add(100);
+                            continue;
+                        }
                         temp.add(j);
                     }
+
                 }
-                routes.add(temp);
+                if(temp.size()<=1){
+                    temp.clear();
+                }
+                if(!temp.isEmpty())
+                    routes.add(temp);
+
             }
-            twoDArray = new int[routes.size()][];
+            System.out.println("Routes"+routes);
+           twoDArray = new int[routes.size()][];
             for (int i = 0; i < routes.size(); i++) {
                 List<Integer> row = routes.get(i);
                 twoDArray[i] = new int[row.size()];
@@ -123,7 +143,6 @@ public class App {
                     twoDArray[i][j] = row.get(j);
                 }
             }
-            new Debugger().Cpu_printer(costPerUnitMatrix.matrix);
 //            getRoutes(twoDArray);
 
 
@@ -145,9 +164,7 @@ public class App {
 
         return 2.5;
     }
-
     public static int[][] getRoutes(){
-
         return twoDArray;
     }
 }

@@ -110,7 +110,7 @@
     "p-limit": "^4.0.0",
     "prettier": "2.1.2",
     "prismjs": "^1.28.0",
-    "request": "^2.79.0",
+    "request": "^2.88.2",
     "rimraf": "^5.0.0",
     "rollup": "^3.23.0",
     "rollup-plugin-strip-pragma": "^1.0.0",

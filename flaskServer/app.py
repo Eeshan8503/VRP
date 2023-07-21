@@ -14,10 +14,14 @@ def init_data():
     data = request.get_json()
     print('Received data:', data)
     response = {
-        'message': 'Data received successfully',
+        'message': data,
     }
-    # data=codeing.extracter(data);
-    cesium_demo_python.runner(1)
+    print(type(data['data']))
+    print("=====================")
+    data=codeing.extracter(data['data'])
+    print("======================")
+    print(type(data))
+    cesium_demo_python.runner(data.tolist())
     return jsonify(response)
 
 if __name__ == '__main__':

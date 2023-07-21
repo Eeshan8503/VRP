@@ -3,13 +3,12 @@
 
 function setConfigs() {
     viewer.camera.flyTo({
-        destination: Cesium.Rectangle.fromDegrees(-78.808997, 42.994246, -78.685068, 43.092456) 
+        destination: Cesium.Rectangle.fromDegrees(-78.758627, 43.012311, -78.638361, 43.082472) 
     });
-    viewer.clock.currentTime = Cesium.JulianDate.addSeconds('2023-07-20T08:00:00Z', 0, new Cesium.JulianDate());
+    viewer.clock.currentTime = Cesium.JulianDate.addSeconds('2023-07-22T08:00:00Z', 0, new Cesium.JulianDate());
     allIDs = [
         'o-Truck0-/veroviz/models/ub_truck.gltf-stationary', 
         'o-truck package 1-/veroviz/models/box_blue.gltf-stationary', 
-        'o-truck package 2-/veroviz/models/box_blue.gltf-stationary', 
         'o-Truck1-/veroviz/models/ub_truck.gltf-stationary', 
         'o-Truck0-/veroviz/models/ub_truck.gltf-move', 
         'o-Truck1-/veroviz/models/ub_truck.gltf-move'    
@@ -29,12 +28,6 @@ objectInfo['Truck0-/veroviz/models/ub_truck.gltf'] = {
 objectInfo['truck package 1-/veroviz/models/box_blue.gltf'] = {
     label : 'truck package 1 (/veroviz/models/box_blue.gltf)', 
     childModels : ['o-truck package 1-/veroviz/models/box_blue.gltf-stationary'],
-    scale : 100, 
-    minPxSize : 75 
-}; 
-objectInfo['truck package 2-/veroviz/models/box_blue.gltf'] = {
-    label : 'truck package 2 (/veroviz/models/box_blue.gltf)', 
-    childModels : ['o-truck package 2-/veroviz/models/box_blue.gltf-stationary'],
     scale : 100, 
     minPxSize : 75 
 }; 

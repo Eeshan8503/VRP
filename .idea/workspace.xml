@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="754d605e-4f94-442d-a4b1-9afe67b5372e" name="Changes" comment="" />
+    <list default="true" id="754d605e-4f94-442d-a4b1-9afe67b5372e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesktopApp/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/DesktopApp/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cesium/Source/Cesium.js" beforeDir="false" afterPath="$PROJECT_DIR$/cesium/Source/Cesium.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cesium/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/cesium/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cesium/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cesium/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cesium/packages/engine/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cesium/packages/engine/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cesium/packages/widgets/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cesium/packages/widgets/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cesium/veroviz/demo/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/cesium/veroviz/demo/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cesium/veroviz/demo/displayNodes.js" beforeDir="false" afterPath="$PROJECT_DIR$/cesium/veroviz/demo/displayNodes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cesium/veroviz/demo/displayPaths.js" beforeDir="false" afterPath="$PROJECT_DIR$/cesium/veroviz/demo/displayPaths.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cesium/veroviz/demo/routes.czml" beforeDir="false" afterPath="$PROJECT_DIR$/cesium/veroviz/demo/routes.czml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskServer/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/flaskServer/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskServer/cesium_demo_python.py" beforeDir="false" afterPath="$PROJECT_DIR$/flaskServer/cesium_demo_python.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskServer/codeing.py" beforeDir="false" afterPath="$PROJECT_DIR$/flaskServer/codeing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/java/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/java/src/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/MyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/MyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/src/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/src/App.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,17 +46,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;eeshan&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "full.screen.before.presentation.mode": "false",
+    "git-widget-placeholder": "Rebasing eeshan",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

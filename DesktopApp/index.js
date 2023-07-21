@@ -19,7 +19,9 @@ function createWindow() {
     document.getElementById('leftMenuDiv').appendChild(para)
     para.classList.add('leftMenuBtnDiv')
     para.addEventListener('click',()=>{
-      let data=document.getElementById('bbox').value
+      let data={
+        data:document.getElementById('bbox').value
+      }
       console.log(data)
       fetch('http://localhost:5000/init-data', {
         method: 'POST',

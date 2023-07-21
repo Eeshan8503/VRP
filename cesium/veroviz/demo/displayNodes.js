@@ -7,7 +7,7 @@ function displayNodes() {
         name : '0',
         parent : nodePins,
         description : 'd11',
-        position : Cesium.Cartesian3.fromDegrees(-78.77059936523439, 43.06043086875781),
+        position : Cesium.Cartesian3.fromDegrees(-78.74862670898439, 43.05692081484412),
         billboard : {
             image : pinBuilder.fromText('0', Cesium.Color.RED, 40).toDataURL(),
             verticalOrigin : Cesium.VerticalOrigin.BOTTOM
@@ -18,7 +18,7 @@ function displayNodes() {
         name : '1',
         parent : nodePins,
         description : 'd22',
-        position : Cesium.Cartesian3.fromDegrees(-78.69506835937501, 43.05842514826838),
+        position : Cesium.Cartesian3.fromDegrees(-78.64837646484376, 43.03635789263302),
         billboard : {
             image : pinBuilder.fromText('1', Cesium.Color.RED, 40).toDataURL(),
             verticalOrigin : Cesium.VerticalOrigin.BOTTOM
@@ -29,7 +29,7 @@ function displayNodes() {
         name : '2',
         parent : nodePins,
         description : 'c13',
-        position : Cesium.Cartesian3.fromDegrees(-78.72940063476564, 43.00424589515733),
+        position : Cesium.Cartesian3.fromDegrees(-78.72253417968751, 43.02231096029591),
         billboard : {
             image : pinBuilder.fromText('2', Cesium.Color.BLUE, 40).toDataURL(),
             verticalOrigin : Cesium.VerticalOrigin.BOTTOM
@@ -40,7 +40,7 @@ function displayNodes() {
         name : '3',
         parent : nodePins,
         description : 'c24',
-        position : Cesium.Cartesian3.fromDegrees(-78.78845214843751, 43.02532128785062),
+        position : Cesium.Cartesian3.fromDegrees(-78.69369506835939, 43.072463813847975),
         billboard : {
             image : pinBuilder.fromText('3', Cesium.Color.BLUE, 40).toDataURL(),
             verticalOrigin : Cesium.VerticalOrigin.BOTTOM
